@@ -1,0 +1,49 @@
+import ProductController from "#controllers/product-controller.js";
+
+export const productRoutes = [
+ 
+    { 
+        pattern: '/products',
+        method: 'GET',
+        handler: ProductController.index
+    },
+
+    { 
+        pattern: '/products/:id',
+        method: 'GET',
+        handler: ProductController.show
+    },
+
+    { 
+        pattern: '/products',
+        method: 'POST',
+        handler: ProductController.create
+    },
+
+    { 
+        pattern: '/products/:id',
+        method: 'DELETE',
+        handler: ProductController.destroy
+    },
+
+    { 
+        pattern: '/products/:id',
+        method: 'PUT',
+        handler: ProductController.update
+    },
+
+    { 
+        pattern: '/products/:id',
+        method: 'PATCH',
+        handler: ProductController.modify
+    }
+
+];
+
+/*
+    Notez qu'il n'y a pas de 'export default' à la fin
+
+    Cet exemple n'est pas relié spécifiquement aux routes,
+    c'est simplement pour montrer une autre façon
+    d'exporter des éléments d'un module    
+*/
